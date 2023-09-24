@@ -92,6 +92,7 @@ class UserScreen extends StatelessWidget {
                 color: Colors.grey[500],
               )
             ]),
+            SizedBox(height:11),
             ListView.separated(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
@@ -109,7 +110,7 @@ class UserScreen extends StatelessWidget {
             //   shrinkWrap: true,
             //     itemBuilder: (BuildContext, index) =>cards[index], separatorBuilder: (BuildContext, index) =>  SizedBox(height: 5,), itemCount: cards.length)),
             SizedBox(height: 11),
-            MyHomePage(),
+
           ]),
 
         ),
@@ -157,6 +158,6 @@ class UserScreen extends StatelessWidget {
 //       ),
 //     ]),
 
-      );
+        bottomNavigationBar:MyHomePage(), );
   }
 }

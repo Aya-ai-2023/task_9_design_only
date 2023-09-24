@@ -53,39 +53,22 @@ List<Model> myContacts=
   Model("Joe","01001664567",119),
 ];
 
-List<SizedBox> cards=
-    [
-      SizedBox(
-        height:150,
-        width:150,
-        child: Card(
-          color: Colors.blue,
-          child: Expanded(
-            child: ListTile(
-              leading: Image.network('https://images.unsplash.com/photo-1578897367107-2828e351c8a8?ixlib=rb-4.0.3',height: 100,),
-              title: Text('Title', style: TextStyle(fontSize: 20)),
-              subtitle: Text('Subtitle', style: TextStyle(fontSize: 16)),
-              trailing: Icon(Icons.arrow_forward),
-              contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-              dense: true,
-            ),
-          ),
-        ),
-      ),
-      SizedBox(
-        height:150,
-        width:150,
-        child: Card(
-          color: Colors.tealAccent,
-          child: ListTile(
-            leading: Image.network('https://picsum.photos/250?image=9'),
-            title: Text('Title', style: TextStyle(fontSize: 20)),
-            subtitle: Text('Subtitle 2', style: TextStyle(fontSize: 16)),
-            trailing: Icon(Icons.arrow_forward),
-            contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-            dense: true,
-          ),
-        ),
+List<ListTile> cards=
+    [ListTile(
+      leading: Image.network('https://images.unsplash.com/photo-1578897367107-2828e351c8a8?ixlib=rb-4.0.3',height: 100,),
+      title: Text('Title', style: TextStyle(fontSize: 20)),
+      subtitle: Text('Subtitle', style: TextStyle(fontSize: 16)),
+      trailing: Icon(Icons.arrow_forward),
+      //contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+    //  dense: true,
+    ),
+      ListTile(
+        leading: Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuBCrqXDlAxaQWVLmcGnhRsTGSLUHuUQiOVA&usqp=CAU'),
+        title: Text('Title', style: TextStyle(fontSize: 20)),
+        subtitle: Text('Subtitle 2', style: TextStyle(fontSize: 16)),
+        trailing: Icon(Icons.arrow_forward),
+        contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        dense: true,
       ),
     ];
 
@@ -100,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
   // Define the list of icons for the bottom navigation bar.
   final List<IconData> _icons = [
     Icons.home,
-    Icons.search,
+    Icons.shopping_cart,
     Icons.favorite,
     Icons.notifications,
     Icons.person,
@@ -125,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
         type: BottomNavigationBarType.fixed, // This ensures all icons are visible.
         selectedFontSize: 14.0,
         unselectedFontSize: 14.0,
-        selectedItemColor: Colors.blue, // Change the selected item color.
+        selectedItemColor: Colors.redAccent, // Change the selected item color.
         unselectedItemColor: Colors.grey, // Change the unselected item color.
         onTap: (index) {
           setState(() {
