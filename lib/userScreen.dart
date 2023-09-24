@@ -12,7 +12,7 @@ class UserScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(15.0),
         child: SingleChildScrollView(
           child: Column(children: <Widget>[
             Padding(
@@ -96,10 +96,10 @@ class UserScreen extends StatelessWidget {
             ListView.separated(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
-              itemCount: cards.length,
+              itemCount: card3.length,
               separatorBuilder: (context, index) => Divider(),
               itemBuilder: (context, index) {
-                return cards[index];
+                return card3[index];
               },
             ),
 
